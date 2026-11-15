@@ -1,0 +1,11 @@
+appointment_id,patient_id,doctor_name,date,time,purpose,status,notes
+APT-2001,PAT-1001,Dr. Amina Bello,2026-11-10,09:00,Routine Physical Exam,Completed,Vitals normal
+APT-2002,PAT-1001,Dr. Amina Bello,2026-11-13,11:30,Blood Panel Follow-Up,Completed,Fasting requested
+APT-2003,PAT-1002,Dr. Fatima Yusuf,2026-11-13,08:45,Emergency Nebulizer Stabilization,Completed,Priority 1 triage
+APT-2004,PAT-1003,Dr. Chidi Okafor,2026-11-13,14:00,Post-Antibiotic Review,Pending,Bring prescription sheet
+APT-2005,PAT-1004,Dr. Amina Bello,2026-11-13,15:15,Neurology Screening,Pending,Migraine diary check
+APT-2006,PAT-1005,Dr. Fatima Yusuf,2026-11-13,10:15,X-Ray Ankle Assessment,Completed,Ice & compression applied
+APT-2007,PAT-1006,Dr. Fatima Yusuf,2026-11-14,09:30,Physiotherapy Follow-Up,Pending,Check mobility range
+APT-2008,PAT-1007,Dr. Chidi Okafor,2026-11-12,16:00,Dermatology Consult,Cancelled,Rescheduled by student
+APT-2009,PAT-1008,Dr. Amina Bello,2026-11-13,16:30,Iron Supplement Check,Pending,Pending lab confirmation
+APT-2010,PAT-1003,Dr. Chidi Okafor,2026-11-01,10:00,Initial Fever Consult,Completed,Recovered well

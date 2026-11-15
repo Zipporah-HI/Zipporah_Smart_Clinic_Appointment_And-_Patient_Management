@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="inheritArrow" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto">
+      <polygon points="0,1 13,7 0,13" fill="#FFFFFF" stroke="#0F2942" stroke-width="1.8"/>
+    </marker>
+    <marker id="implArrow" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto">
+      <polygon points="0,1 13,7 0,13" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.8"/>
+    </marker>
+    <marker id="compDiamond" markerWidth="16" markerHeight="12" refX="0" refY="6" orient="auto">
+      <polygon points="0,6 7,1 14,6 7,11" fill="#0F2942"/>
+    </marker>
+    <marker id="assocArrow" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto">
+      <path d="M0,1 L11,5 L0,9" fill="none" stroke="#475569" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="860" fill="#F8FAFC"/>
+  <text x="640" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0F2942">SCAPMS — UML Class Diagram (Inheritance, Abstract Classes, Polymorphism &amp; Composition)</text>
+
+  <!-- PatientRecord (Abstract) -->
+  <g transform="translate(80,65)">
+    <rect width="340" height="195" rx="8" fill="#FFFFFF" stroke="#0F2942" stroke-width="2"/>
+    <rect width="340" height="44" rx="8" fill="#0F2942"/>
+    <rect y="36" width="340" height="8" fill="#0F2942"/>
+    <text x="170" y="18" text-anchor="middle" font-size="11" fill="#BAE6FD" font-style="italic">&lt;&lt;abstract&gt;&gt;</text>
+    <text x="170" y="36" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">PatientRecord</text>
+    <text x="12" y="64" font-size="11.5" fill="#334155"># patientId_ : string</text>
+    <text x="12" y="80" font-size="11.5" fill="#334155"># name_ : string</text>
+    <text x="12" y="96" font-size="11.5" fill="#334155"># age_ : int | # contactInfo_ : string</text>
+    <text x="12" y="112" font-size="11.5" fill="#334155"># appointmentIds_ : vector&lt;string&gt;</text>
+    <line x1="0" y1="122" x2="340" y2="122" stroke="#CBD5E1"/>
+    <text x="12" y="140" font-size="11.5" fill="#0F2942" font-style="italic">+ getPatientCategory() : string = 0</text>
+    <text x="12" y="156" font-size="11.5" fill="#0F2942" font-style="italic">+ getPriorityLevel() : int = 0</text>
+    <text x="12" y="172" font-size="11.5" fill="#0F2942" font-style="italic">+ getDetailsSummary() : string = 0</text>
+    <text x="12" y="188" font-size="11.5" fill="#0F2942" font-style="italic">+ clone() : unique_ptr&lt;PatientRecord&gt; = 0</text>
+  </g>
+
+  <!-- Appointable (Interface) -->
+  <g transform="translate(500,85)">
+    <rect width="300" height="135" rx="8" fill="#FFFFFF" stroke="#0F766E" stroke-width="2"/>
+    <rect width="300" height="44" rx="8" fill="#0F766E"/>
+    <rect y="36" width="300" height="8" fill="#0F766E"/>
+    <text x="150" y="18" text-anchor="middle" font-size="11" fill="#CCFBF1" font-style="italic">&lt;&lt;interface&gt;&gt;</text>
+    <text x="150" y="36" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Appointable</text>
+    <line x1="0" y1="54" x2="300" y2="54" stroke="#CBD5E1"/>
+    <text x="12" y="75" font-size="11.5" fill="#0F766E" font-style="italic">+ scheduleAppointment(aptId) : bool = 0</text>
+    <text x="12" y="93" font-size="11.5" fill="#0F766E" font-style="italic">+ cancelAppointment(aptId) : bool = 0</text>
+    <text x="12" y="111" font-size="11.5" fill="#0F766E" font-style="italic">+ getSchedulingPolicy() : string = 0</text>
+  </g>
+
+  <!-- GeneralPatient -->
+  <g transform="translate(30,335)">
+    <rect width="245" height="145" rx="8" fill="#FFFFFF" stroke="#16A34A" stroke-width="2"/>
+    <rect width="245" height="32" rx="8" fill="#16A34A"/>
+    <rect y="24" width="245" height="8" fill="#16A34A"/>
+    <text x="122" y="21" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">GeneralPatient</text>
+    <text x="10" y="52" font-size="11.5" fill="#334155">- visitReason_ : string</text>
+    <text x="10" y="68" font-size="11.5" fill="#334155">- primaryPhysician_ : string</text>
+    <line x1="0" y1="78" x2="245" y2="78" stroke="#CBD5E1"/>
+    <text x="10" y="96" font-size="11" fill="#166534">+ getPatientCategory() // "General"</text>
+    <text x="10" y="112" font-size="11" fill="#166534">+ getPriorityLabel() // "Normal"</text>
+    <text x="10" y="128" font-size="11" fill="#166534">+ scheduleAppointment() / clone()</text>
+  </g>
+
+  <!-- EmergencyPatient -->
+  <g transform="translate(300,335)">
+    <rect width="245" height="145" rx="8" fill="#FFFFFF" stroke="#DC2626" stroke-width="2"/>
+    <rect width="245" height="32" rx="8" fill="#DC2626"/>
+    <rect y="24" width="245" height="8" fill="#DC2626"/>
+    <text x="122" y="21" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">EmergencyPatient</text>
+    <text x="10" y="52" font-size="11.5" fill="#334155">- triageSeverity_ : string</text>
+    <text x="10" y="68" font-size="11.5" fill="#334155">- emergencyContact_ : string</text>
+    <line x1="0" y1="78" x2="245" y2="78" stroke="#CBD5E1"/>
+    <text x="10" y="96" font-size="11" fill="#991B1B">+ getPatientCategory() // "Emergency"</text>
+    <text x="10" y="112" font-size="11" fill="#991B1B">+ getPriorityLabel() // "High Priority"</text>
+    <text x="10" y="128" font-size="11" fill="#991B1B">+ scheduleAppointment() / clone()</text>
+  </g>
+
+  <!-- FollowUpPatient -->
+  <g transform="translate(570,335)">
+    <rect width="245" height="145" rx="8" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+    <rect width="245" height="32" rx="8" fill="#D97706"/>
+    <rect y="24" width="245" height="8" fill="#D97706"/>
+    <text x="122" y="21" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">FollowUpPatient</text>
+    <text x="10" y="52" font-size="11.5" fill="#334155">- previousVisitDate_ : string</text>
+    <text x="10" y="68" font-size="11.5" fill="#334155">- referringDoctor_ : string</text>
+    <line x1="0" y1="78" x2="245" y2="78" stroke="#CBD5E1"/>
+    <text x="10" y="96" font-size="11" fill="#92400E">+ getPatientCategory() // "Follow-Up"</text>
+    <text x="10" y="112" font-size="11" fill="#92400E">+ getPriorityLabel() // "Scheduled"</text>
+    <text x="10" y="128" font-size="11" fill="#92400E">+ scheduleAppointment() / clone()</text>
+  </g>
+
+  <!-- Appointment -->
+  <g transform="translate(910,70)">
+    <rect width="320" height="170" rx="8" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+    <rect width="320" height="32" rx="8" fill="#334155"/>
+    <rect y="24" width="320" height="8" fill="#334155"/>
+    <text x="160" y="21" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Appointment</text>
+    <text x="12" y="52" font-size="11.5" fill="#334155">- appointmentId_ : string</text>
+    <text x="12" y="68" font-size="11.5" fill="#334155">- patientId_ : string</text>
+    <text x="12" y="84" font-size="11.5" fill="#334155">- doctorName_, date_, time_, purpose_</text>
+    <text x="12" y="100" font-size="11.5" fill="#334155">- status_ : AppointmentStatus</text>
+    <line x1="0" y1="110" x2="320" y2="110" stroke="#CBD5E1"/>
+    <text x="12" y="130" font-size="11" fill="#0F2942">+ setStatus(AppointmentStatus)</text>
+    <text x="12" y="148" font-size="11" fill="#0F2942">+ validateFields(...) : void</text>
+  </g>
+
+  <!-- ClinicDatabase -->
+  <g transform="translate(880,315)">
+    <rect width="365" height="190" rx="8" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2"/>
+    <rect width="365" height="34" rx="8" fill="#1E40AF"/>
+    <rect y="26" width="365" height="8" fill="#1E40AF"/>
+    <text x="182" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">ClinicDatabase (Encapsulation &amp; Composition)</text>
+    <text x="12" y="54" font-size="11.5" fill="#334155">- patients_ : vector&lt;unique_ptr&lt;PatientRecord&gt;&gt;</text>
+    <text x="12" y="70" font-size="11.5" fill="#334155">- appointments_ : vector&lt;Appointment&gt;</text>
+    <text x="12" y="86" font-size="11.5" fill="#334155">- waitingQueue_ : queue&lt;string&gt;</text>
+    <text x="12" y="102" font-size="11.5" fill="#334155">- undoStack_ : stack&lt;AdminAction&gt;</text>
+    <text x="12" y="118" font-size="11.5" fill="#334155">- recentPatients_[10] : PatientRecord*</text>
+    <line x1="0" y1="128" x2="365" y2="128" stroke="#CBD5E1"/>
+    <text x="12" y="146" font-size="11" fill="#1E3A8A">+ addPatient / removePatient / updatePatient</text>
+    <text x="12" y="162" font-size="11" fill="#1E3A8A">+ enqueuePatient / dequeueNextPatient</text>
+    <text x="12" y="178" font-size="11" fill="#1E3A8A">+ undoLastAction() / recordPatientAccess()</text>
+  </g>
+
+  <!-- ClinicManager -->
+  <g transform="translate(470,565)">
+    <rect width="380" height="150" rx="8" fill="#FFFFFF" stroke="#0F2942" stroke-width="2"/>
+    <rect width="380" height="34" rx="8" fill="#0F2942"/>
+    <rect y="26" width="380" height="8" fill="#0F2942"/>
+    <text x="190" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">ClinicManager (Controller &amp; Polymorphism)</text>
+    <text x="12" y="54" font-size="11.5" fill="#334155">- db_ : ClinicDatabase</text>
+    <text x="12" y="70" font-size="11.5" fill="#334155">- appointmentController_ : AppointmentController</text>
+    <line x1="0" y1="80" x2="380" y2="80" stroke="#CBD5E1"/>
+    <text x="12" y="98" font-size="11" fill="#0F2942" font-weight="600">+ processPatientPolymorphically(const PatientRecord&amp;)</text>
+    <text x="12" y="114" font-size="11" fill="#334155">+ registerPatient / updatePatient / deletePatient</text>
+    <text x="12" y="130" font-size="11" fill="#334155">+ getMostFrequentlyAttended / CategoryDist / DailySummary</text>
+  </g>
+
+  <!-- SearchEngine -->
+  <g transform="translate(55,565)">
+    <rect width="355" height="150" rx="8" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+    <rect width="355" height="34" rx="8" fill="#7C3AED"/>
+    <rect y="26" width="355" height="8" fill="#7C3AED"/>
+    <text x="177" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">SearchEngine (Manual Algorithms)</text>
+    <line x1="0" y1="42" x2="355" y2="42" stroke="#CBD5E1"/>
+    <text x="12" y="62" font-size="11.5" fill="#4C1D95">+ linearSearchById(db, id)</text>
+    <text x="12" y="79" font-size="11.5" fill="#4C1D95">+ binarySearchById(db, id)</text>
+    <text x="12" y="96" font-size="11.5" fill="#4C1D95">+ recursiveSearchByName(db, query)</text>
+    <text x="12" y="113" font-size="11.5" fill="#4C1D95">+ sortPatients(db, Selection|Insertion|Merge)</text>
+    <text x="12" y="130" font-size="11.5" fill="#4C1D95">+ explainSortChoice(algo, field, count)</text>
+  </g>
+
+  <!-- MainWindow & GUI -->
+  <g transform="translate(910,565)">
+    <rect width="330" height="150" rx="8" fill="#FFFFFF" stroke="#0F766E" stroke-width="2"/>
+    <rect width="330" height="34" rx="8" fill="#0F766E"/>
+    <rect y="26" width="330" height="8" fill="#0F766E"/>
+    <text x="165" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">MainWindow &amp; Qt 6 Panels</text>
+    <text x="12" y="54" font-size="11.5" fill="#334155">- dashboardPanel_, patientPanel_</text>
+    <text x="12" y="70" font-size="11.5" fill="#334155">- appointmentPanel_, queuePanel_</text>
+    <text x="12" y="86" font-size="11.5" fill="#334155">- searchPanel_, adminPanel_</text>
+    <line x1="0" y1="96" x2="330" y2="96" stroke="#CBD5E1"/>
+    <text x="12" y="114" font-size="11" fill="#0F766E">+ QTimer reminders &amp; wait counters</text>
+    <text x="12" y="130" font-size="11" fill="#0F766E">+ Menus, Shortcuts, QFileDialog, try/catch</text>
+  </g>
+
+  <!-- Inheritance lines (Subclasses -> PatientRecord) -->
+  <path d="M152,335 L152,295 L200,295 L200,260" fill="none" stroke="#0F2942" stroke-width="1.8" marker-end="url(#inheritArrow)"/>
+  <path d="M422,335 L422,295 L250,295 L250,260" fill="none" stroke="#0F2942" stroke-width="1.8" marker-end="url(#inheritArrow)"/>
+  <path d="M692,335 L692,280 L300,280 L300,260" fill="none" stroke="#0F2942" stroke-width="1.8" marker-end="url(#inheritArrow)"/>
+
+  <!-- Interface implementation lines (Subclasses ..> Appointable) -->
+  <path d="M180,335 L180,310 L580,310 L580,220" fill="none" stroke="#0F766E" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#implArrow)"/>
+  <path d="M450,335 L450,255 L650,255 L650,220" fill="none" stroke="#0F766E" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#implArrow)"/>
+  <path d="M720,335 L720,220" fill="none" stroke="#0F766E" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#implArrow)"/>
+
+  <!-- Composition: ClinicDatabase owns Appointment and PatientRecord -->
+  <path d="M1070,315 L1070,240" fill="none" stroke="#0F2942" stroke-width="1.8" marker-start="url(#compDiamond)" marker-end="url(#assocArrow)"/>
+  <path d="M880,375 L840,375 L840,520 L40,520 L40,165 L80,165" fill="none" stroke="#0F2942" stroke-width="1.6" marker-start="url(#compDiamond)" marker-end="url(#assocArrow)"/>
+
+  <!-- ClinicManager composes ClinicDatabase & uses SearchEngine / PatientRecord -->
+  <path d="M850,615 L865,615 L865,450 L880,450" fill="none" stroke="#0F2942" stroke-width="1.8" marker-start="url(#compDiamond)" marker-end="url(#assocArrow)"/>
+  <path d="M470,640 L410,640" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#assocArrow)"/>
+  <path d="M910,640 L850,640" fill="none" stroke="#0F766E" stroke-width="1.8" marker-start="url(#compDiamond)" marker-end="url(#assocArrow)"/>
+
+  <!-- Legend -->
+  <g transform="translate(55,755)">
+    <rect width="1185" height="75" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="20" y="25" font-size="12.5" font-weight="700" fill="#0F2942">UML Legend:</text>
+    <line x1="120" y1="21" x2="180" y2="21" stroke="#0F2942" stroke-width="1.8" marker-end="url(#inheritArrow)"/>
+    <text x="190" y="25" font-size="12" fill="#334155">Inheritance (is-a)</text>
+
+    <line x1="340" y1="21" x2="400" y2="21" stroke="#0F766E" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#implArrow)"/>
+    <text x="410" y="25" font-size="12" fill="#334155">Interface Realization (Appointable)</text>
+
+    <line x1="650" y1="21" x2="710" y2="21" stroke="#0F2942" stroke-width="1.8" marker-start="url(#compDiamond)" marker-end="url(#assocArrow)"/>
+    <text x="720" y="25" font-size="12" fill="#334155">Composition (owns lifetime)</text>
+
+    <line x1="920" y1="21" x2="980" y2="21" stroke="#475569" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#assocArrow)"/>
+    <text x="990" y="25" font-size="12" fill="#334155">Dependency / Algorithm Dispatch</text>
+
+    <text x="20" y="54" font-size="11" fill="#475569">Namespaces: scapms::model (PatientRecord, Appointable, Subclasses, Appointment, ClinicDatabase) | scapms::controller (ClinicManager, SearchEngine, AppointmentController)</text>
+    <text x="20" y="69" font-size="11" fill="#475569">GUI &amp; Utils: scapms::gui (MainWindow, Panels) | scapms::utils (ClinicExceptions, IDGenerator, FileHandler)</text>
+  </g>
+</svg>

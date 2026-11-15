@@ -1,0 +1,7 @@
+set(__QT_DEPLOY_TARGETS "scapms_core;scapms;scapms_tests")
+set(__QT_DEPLOY_TARGET_scapms_core_FILE /Users/user/Desktop/Zora/build/libscapms_core.a)
+set(__QT_DEPLOY_TARGET_scapms_core_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_scapms_FILE /Users/user/Desktop/Zora/build/scapms)
+set(__QT_DEPLOY_TARGET_scapms_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_scapms_tests_FILE /Users/user/Desktop/Zora/build/scapms_tests)
+set(__QT_DEPLOY_TARGET_scapms_tests_TYPE EXECUTABLE)

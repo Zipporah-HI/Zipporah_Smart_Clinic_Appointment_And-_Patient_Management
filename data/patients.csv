@@ -1,0 +1,9 @@
+patient_id,category,name,age,contact_info,extra_field_1,extra_field_2,access_count
+PAT-1001,General,Aisha Mohammed,21,+234-803-112-4401,Annual Wellness Check,Dr. Amina Bello,5
+PAT-1002,Emergency,Chukwuemeka Obi,24,+234-809-441-9920,Critical - Acute Asthma,Grace Obi (Mother),4
+PAT-1003,Follow-Up,Toluwani Adeyemi,19,+234-812-300-7715,2026-10-28,Dr. Chidi Okafor,5
+PAT-1004,General,Zainab Ibrahim,22,+234-706-881-2304,Persistent Migraine,Dr. Amina Bello,3
+PAT-1005,Emergency,Daniel Etuk,20,+234-805-612-9083,Urgent - Sports Ankle Sprain,Hostel Warden,3
+PAT-1006,Follow-Up,Ngozi Nwosu,23,+234-816-225-3189,2026-11-02,Dr. Fatima Yusuf,2
+PAT-1007,General,Samuel Olatunji,25,+234-802-774-1190,Lab Result Review,Dr. Chidi Okafor,2
+PAT-1008,Follow-Up,Khadija Musa,20,+234-813-990-5412,2026-11-05,Dr. Amina Bello,2

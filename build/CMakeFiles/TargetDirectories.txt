@@ -1,0 +1,12 @@
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_core.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_tests.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/test.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/edit_cache.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/rebuild_cache.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_core_autogen_timestamp_deps.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_core_autogen.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_autogen_timestamp_deps.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_autogen.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_tests_autogen_timestamp_deps.dir
+/Users/user/Desktop/Zora/build/CMakeFiles/scapms_tests_autogen.dir

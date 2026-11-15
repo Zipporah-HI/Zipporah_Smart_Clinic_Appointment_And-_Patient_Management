@@ -1,0 +1,19 @@
+Start testing: Nov 13 21:52 WAT
+----------------------------------------------------------
+1/1 Testing: SCAPMSCoreTests
+1/1 Test: SCAPMSCoreTests
+Command: "/Users/user/Desktop/Zora/build/scapms_tests"
+Directory: /Users/user/Desktop/Zora/build
+"SCAPMSCoreTests" start time: Nov 13 21:52 WAT
+Output:
+----------------------------------------------------------
+All SCAPMS unit tests passed successfully.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"SCAPMSCoreTests" end time: Nov 13 21:52 WAT
+"SCAPMSCoreTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 13 21:52 WAT
