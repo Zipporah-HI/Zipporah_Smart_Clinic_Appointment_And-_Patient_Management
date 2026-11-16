@@ -1,4 +1,4 @@
-# SCAPMS — Smart Clinic Appointment & Patient Management System
+# SCAPMS  Smart Clinic Appointment & Patient Management System
 
 COS202 Programming II Lab Assessment Project written in **C++17** with **Qt 6 Widgets**.
 
